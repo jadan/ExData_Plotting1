@@ -12,4 +12,8 @@ colnames(data)<-c("Date","Time","Global_active_power","Global_reactive_power",
 
 #Convert Date and Time columns to standard R objects.
 data$Date<-as.Date(data$Date, format="%d/%m/%Y")
-data$Time<-strptime(data$Time,format="%H:%M:%S")
+data$Time<-strptime(paste(data$Date,data$Time),"%Y-%m-%d %H:%M:%S")
+daysSubset<-subset(data, Date == "2007-02-01" | Date == "2007-02-02")
+
+#Set variable to avoid loading data several times.plot
+dataLoaded = TRUE
