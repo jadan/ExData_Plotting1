@@ -11,5 +11,5 @@ colnames(data)<-c("Date","Time","Global_active_power","Global_reactive_power",
                   "Voltage","Global_intensity","Sub_metering_1","Sub_metering_2","Sub_metering_3")
 
 #Convert Date and Time columns to standard R objects.
-data$Date<-as.Date(data$Date)
+data$Date<-as.Date(data$Date, format="%d/%m/%Y")
 data$Time<-strptime(data$Time,format="%H:%M:%S")
