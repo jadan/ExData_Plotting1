@@ -91,6 +91,8 @@ date. There should be four PNG files and four R code files.
 
 The four plots that you will need to construct are shown below. 
 
+##Solution by Jose Mendoza
+The solution uses 5 scripts, one script to draw and write each plot, and one script to load the data. The data loading script (*loadData.R*) is called automatically by each plot#.R script. The images below are not the example plots anymore, but the plots created using these scripts. 
 
 ### Plot 1
 
